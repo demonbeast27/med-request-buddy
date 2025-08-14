@@ -18,8 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        medical: "bg-[var(--gradient-primary)] text-primary-foreground hover:shadow-lg hover:scale-105 transition-[var(--transition-smooth)] border-0",
-        success: "bg-medical-green text-accent-foreground hover:bg-medical-green/90 shadow-[var(--shadow-button)]",
+        medical: "bg-[var(--gradient-primary)] text-primary-foreground hover:shadow-[var(--shadow-hover)] hover:scale-105 active:scale-95 transition-[var(--transition-bounce)] border-0 relative overflow-hidden",
+        success: "bg-medical-green text-accent-foreground hover:bg-medical-green/90 hover:shadow-[var(--shadow-button)] hover:scale-105 transition-[var(--transition-smooth)]",
+        floating: "bg-[var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-float)] hover:shadow-[var(--shadow-hover)] hover:scale-110 hover:-translate-y-1 transition-[var(--transition-bounce)] border-0",
       },
       size: {
         default: "h-10 px-4 py-2",

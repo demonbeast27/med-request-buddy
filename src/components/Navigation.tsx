@@ -12,13 +12,15 @@ export const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-card border-b border-border shadow-[var(--shadow-soft)]">
+    <nav className="bg-card/80 backdrop-blur-md border-b border-border shadow-[var(--shadow-soft)] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
-            <Link to="/" className="flex items-center space-x-2">
-              <Pill className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-foreground">MedRequest</span>
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="p-1 bg-[var(--gradient-primary)] rounded-lg group-hover:scale-110 transition-[var(--transition-bounce)] shadow-[var(--shadow-glow)]">
+                <Pill className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <span className="text-xl font-bold text-foreground group-hover:text-primary transition-[var(--transition-smooth)]">MedRequest</span>
             </Link>
             
             <div className="hidden md:flex space-x-4">
