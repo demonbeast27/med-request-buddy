@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { PharmacyResults } from '@/components/PharmacyResults';
 import { CheckCircle, Home, FileText } from 'lucide-react';
 
 export const Success = () => {
@@ -15,7 +16,7 @@ export const Success = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="max-w-2xl mx-auto p-6 pt-16 animate-fade-in">
+      <div className="max-w-6xl mx-auto p-6 pt-16 space-y-8 animate-fade-in">
         <Card className="shadow-[var(--shadow-float)] border-0 text-center bg-[var(--gradient-card)] hover:shadow-[var(--shadow-hover)] transition-[var(--transition-smooth)] animate-scale-in">
           <CardContent className="p-8 space-y-6">
             <div className="flex justify-center">
@@ -73,6 +74,13 @@ export const Success = () => {
                 </Button>
               </Link>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Pharmacy Results Section */}
+        <Card className="shadow-[var(--shadow-float)] border-0 bg-[var(--gradient-card)] animate-fade-in">
+          <CardContent className="p-8">
+            <PharmacyResults />
           </CardContent>
         </Card>
       </div>
