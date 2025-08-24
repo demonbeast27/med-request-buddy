@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
-import { Pill, LogOut, User } from 'lucide-react';
+import { Pill, LogOut, User, Building2 } from 'lucide-react';
 
 export const Navigation = () => {
   const { user, logout } = useAuth();
@@ -40,6 +40,16 @@ export const Navigation = () => {
                   My Requests
                 </Button>
               </Link>
+              <Link to="/pharmacy-registration">
+                <Button
+                  variant={isActive('/pharmacy-registration') ? 'medical' : 'ghost'}
+                  size="sm"
+                  className="flex items-center space-x-1"
+                >
+                  <Building2 className="h-4 w-4" />
+                  <span>Join as Pharmacy</span>
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -57,7 +67,7 @@ export const Navigation = () => {
 
         {/* Mobile navigation */}
         <div className="md:hidden pb-4">
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-2">
             <Link to="/">
               <Button
                 variant={isActive('/') ? 'medical' : 'ghost'}
@@ -72,6 +82,16 @@ export const Navigation = () => {
                 size="sm"
               >
                 My Requests
+              </Button>
+            </Link>
+            <Link to="/pharmacy-registration">
+              <Button
+                variant={isActive('/pharmacy-registration') ? 'medical' : 'ghost'}
+                size="sm"
+                className="flex items-center space-x-1"
+              >
+                <Building2 className="h-4 w-4" />
+                <span>Join as Pharmacy</span>
               </Button>
             </Link>
           </div>

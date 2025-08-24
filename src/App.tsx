@@ -10,6 +10,7 @@ import { Home } from "@/pages/Home";
 import { Loading } from "@/pages/Loading";
 import { Success } from "@/pages/Success";
 import { MyRequests } from "@/pages/MyRequests";
+import { PharmacyRegistration } from "@/pages/PharmacyRegistration";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
                 <MyRequests />
               </ProtectedRoute>
             } />
+            <Route path="/pharmacy-registration" element={<PharmacyRegistration />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
