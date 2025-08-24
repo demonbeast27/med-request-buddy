@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { Login } from "@/pages/Login";
 import { Home } from "@/pages/Home";
+import { Loading } from "@/pages/Loading";
 import { Success } from "@/pages/Success";
 import { MyRequests } from "@/pages/MyRequests";
 import NotFound from "./pages/NotFound";
@@ -41,6 +43,11 @@ const App = () => (
             <Route path="/" element={
               <ProtectedRoute>
                 <Home />
+              </ProtectedRoute>
+            } />
+            <Route path="/loading" element={
+              <ProtectedRoute>
+                <Loading />
               </ProtectedRoute>
             } />
             <Route path="/success" element={

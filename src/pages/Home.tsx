@@ -80,8 +80,13 @@ export const Home = () => {
     const newRequest = { ...requestData, id: Date.now().toString() };
     localStorage.setItem('medapp_requests', JSON.stringify([...existingRequests, newRequest]));
 
-    // Navigate to success page
-    navigate('/success');
+    // Navigate to loading page with search params
+    const params = new URLSearchParams({
+      medicine: formData.medicineName,
+      city: formData.city,
+      pincode: formData.pincode
+    });
+    navigate(`/loading?${params.toString()}`);
   };
 
   const cities = [
